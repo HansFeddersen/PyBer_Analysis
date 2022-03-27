@@ -24,7 +24,7 @@ To obtain the results showed below, the following process was done:
 ![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/Merge%20DF.png)
 
 **Get a Summary DataFrame**
-To get a Summary DataFrame, we need to work with the information to get calculate the fields that we want to have on our summary In this case we are going to analyze the information of the rides for each city type (Urban, SubUrban and Rural) so it is neccesary to group by "type".
+To get a Summary DataFrame, we need to work with the information to get calculate the fields that we want to have on our summary In this case we are going to analyze the information of the rides for each city type (Urban, Suburban and Rural) so it is necessary to group by "type".
 
 The fields included on the summary are the following:
 - **Total rides per city type:** Count how many rides are per each city type
@@ -55,10 +55,10 @@ As we can see on the pivot table, there are many empty or "NaN" values, so we gr
 
 As we can see, all of the lines behave similar but have a few differences. The 3 of them peak on the week before march, but for Rural is not the largest peak (that is in April).
 
-## Recomendations:
+## Recommendations:
 
 - The average ride per driver per city type is 1.6 in Rural cities, 1.27 in Suburban and 0.67 in urban. **With that numbers it would be  good thing to see how much free time does each driver get per day, with the possibility of adding more drivers**, maybe on rural cities (or even urban cities) not all the people that need rides are getting them because of the availability of the drivers.
 
-- The average fare per ride on rural cities is 41% higher than the average fare in urban cities (probably because of the distance between points). **Finding  way to make more people take rides on the rural cities would make more money to the company (assuming they take a percentage from every ride).**
+- The average fare per ride on rural cities is 41% higher than the average fare in urban cities (probably because of the distance between points). **Finding a way to make more people take rides on the rural cities would make more money to the company (assuming they take a percentage from every ride).**
 
-- **If they haven't, the company should conduct a study of the elasticity of the demand when comes to the fares**. If the drivers are not working on full capacity, maybe lowering the fares a little would increment the numbers of rides and in the long run it would improve the companies profits.
+- **If they haven't, the company should conduct a study of the elasticity of the demand when comes to the fares**. If the drivers are not working on full capacity, maybe lowering the fares a little would increment the numbers of rides and in the long run it would improve the company's profits.
