@@ -50,6 +50,6 @@ As we can see on the pivot table, there are many empty or "NaN" values, so we gr
 
 ![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/Resample_pivot.png)
 
-
-
+**With that done, it is possible to create the final line graph (because it the evolution in time) of the total amount of fares per time for each city type:**
+![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
 
