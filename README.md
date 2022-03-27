@@ -37,44 +37,19 @@ Finally, we create a new DataFrame with the information of our summary, and the 
 
 ![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/Summary_DF.png)
 
+With this summary is easier to understand the information per city, but it can be even more clear and complete if we create a line graph showing how the total amount of fares for each city behaves in time, for that we have to do the following:
 
-**Get the number of students for 10th, 11th and 12th grade for Thomas High:** grade_10_to_12_thomas = school_data_complete_df.loc[((school_data_complete_df["school_name"] == "Thomas High School") & (school_data_complete_df["grade"] != "9th")), "student_name"].count()
+- **Create a new data frame (from the original merge) grouping by date and city time:** We add all the fares for the same Date and time and City type:
 
-Get the new percentage of students that passed math in Thomas High School:
+![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/New_date_and_type_DF.png)
 
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/math_replace_9th.png)
+- **Create a pivot table with the date as the index and then filter the desired dates using the function loc:**
+![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/Pivot_table.png)
 
-**How does replacing the ninth-grade scores affect the following:**
+As we can see on the pivot table, there are many empty or "NaN" values, so we group the dates by week (using the resample function) to avoid this:
 
-- **Math and reading scores by grade**
-The only scores that should change are the ones of the 9th grade of Thomas High School, the performance of the other schools is not affected by replacing the grades.
-
-The example for the math and reading scores are as follows:
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Math_by_grade.png)
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Reading_by_grade.png)
-
-To get the summary by grade, first it is necessary to create the series for each grade, group them by school name and then combine them into a DataFrame:
-
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Math_by_grade_DF.png)
+![This is an image](https://github.com/HansFeddersen/PyBer_Analysis/blob/main/Resources/More/Resample_pivot.png)
 
 
-- **Scores by school spending**
-
-As expected, there is only change between the spending ranges of $586 to 630 and from $631 to $645:
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Scores_by_school_spending.png)
-
-To get this result, we have to establish the bins, categorize them, calculate the averages for each field and then create the Data Frame:
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Scores_by_school_spending_DF.png)
-
-- **Scores by school size**
-In this category, there is no notable change:
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Scores_by_school_size.png)
 
 
-- **Scores by school type**
-There is also no notable change:
-![This is an image](https://github.com/HansFeddersen/School_District_Analysis/blob/main/Resources/More/Scores_by_school_type.png)
-
-**Summary:** Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
-
-- The main changes are the reading and math score of Thomas High School, the passing percentages (math, reading and overall). Also, it affects directly the performance of the school compared to the others, since it went from being the second best High School (according to overall passing percentage) to being the number 7.
