@@ -3,7 +3,7 @@
 Data Bootcamp Module 5: PyBer with Matplotlib
 ## Overview of Project
 
-### The purpose of this project is to analyze the data of a ride application in different cities. Each city has its own classification (Urban, Rural), a defined number of drivers and information of how many rides (and information for each ride) were done during a certain period of time. The main analysis is done by creating new DataFrames (to obtain and group the key information needed) and then by plotting it with the objective of having a visual understanding of the results.
+### The purpose of this project is to analyze the data of a ride application in different cities. Each city has its own classification (Urban, Suburban, Rural), a defined number of drivers and information of how many rides (and information for each ride) were done during a certain period of time. The main analysis is done by creating new DataFrames (to obtain and group the key information needed) and then by plotting it with the objective of having a visual understanding of the results.
 
 ## Resoruces
 **For this analysis, the following resuorces were used**:
